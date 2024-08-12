@@ -1,0 +1,27 @@
+{
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "eslint.enable": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "prettier.requireConfig": true,
+    "files.associations": {
+      "*.html": "html",
+      "*.css": "css"
+    },
+    "cSpell.words": [
+      "devkit",
+      "lcov",
+      "Parens",
+      "subdir"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ],
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  }
+  
