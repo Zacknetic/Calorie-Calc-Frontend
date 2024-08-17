@@ -1,6 +1,6 @@
 {
     "editor.tabSize": 2,
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "eslint.enable": true,
     "typescript.tsdk": "node_modules/typescript/lib",
     "prettier.requireConfig": true,
@@ -21,7 +21,7 @@
       "typescriptreact"
     ],
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+      "source.fixAll.eslint": "never"
     }
   }
   
