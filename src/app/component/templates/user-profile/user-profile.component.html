@@ -1,0 +1,31 @@
+<div>
+  <!-- <h2>{{ userName }} </h2> -->
+  <form [formGroup]="regexForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="userName">Username</label>
+      <input id="userName" formControlName="userName" type="text" placeholder="My Username">
+      <div *ngIf="userName?.invalid && (userName?.dirty || userName?.touched)">
+        <div *ngIf="userName?.errors?.['required']">
+          Username is required.
+        </div>
+        <div *ngIf="userName?.errors?.['minlength']">
+          Username must be at least 1 character long.
+        </div>
+        <div *ngIf="userName?.errors?.['maxlength']">
+          Username cannot exceed 25 characters. (Currently {{userName.value?.length || 0}} characters!)
+        </div>
+      </div>
+    </div>
+    <div>
+      <label for="userWeightUnitType">Unit Type</label>
+      <input id="userWeightUnitType" formControlName="userWeightUnitType" type="WEIGHT_UNITS" placeholder=WEIGHT_UNITS.Pounds>
+      <div *ngIf="userWeightUnitType?.invalid && (userWeightUnitType?.dirty || userWeightUnitType?.touched)">
+        <div *ngIf="userWeightUnitType?.errors?.['required']">
+          Unit Type is required.
+        </div>
+      </div>
+    </div>
+    <button type="submit" [disabled]="regexForm.invalid">Submit</button>
+  </form>
+  
+</div>
