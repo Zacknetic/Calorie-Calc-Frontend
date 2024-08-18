@@ -1,0 +1,37 @@
+<div>
+  <!-- <h2>{{ catName }} </h2> -->
+  <form [formGroup]="regexForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="catName">Cat Name</label>
+      <input id="catName" formControlName="catName" type="text" placeholder="My Cat's Name">
+      <div *ngIf="catName?.invalid && (catName?.dirty || catName?.touched)">
+        <div *ngIf="catName?.errors?.['required']">
+          Cat Name is required.
+        </div>
+        <div *ngIf="catName?.errors?.['minlength']">
+          Cat Name must be at least 1 character long.
+        </div>
+        <div *ngIf="catName?.errors?.['maxlength']">
+          Cat Name cannot exceed 20 characters. (Currently {{catName.value?.length || 0}} characters!)
+        </div>
+      </div>
+    </div>
+    <div>
+      <label for="currentWeight">Current Weight</label>
+      <input id="currentWeight" formControlName="currentWeight" type="number" placeholder="0.00">
+      <div *ngIf="currentWeight?.invalid && (currentWeight?.dirty || currentWeight?.touched)">
+        <div *ngIf="currentWeight?.errors?.['required']">
+          Current Weight is required.
+        </div>
+        <div *ngIf="currentWeight?.errors?.['max']">
+          Current weight must not exceed 99 units.
+        </div>
+        <div *ngIf="currentWeight?.errors?.['min']">
+          Current weight must not drop below 0.01 units. (Currently {{currentWeight.value || 0}}!)
+        </div>
+      </div>
+    </div>
+    <button type="submit" [disabled]="regexForm.invalid">Submit</button>
+  </form>
+  
+</div>
