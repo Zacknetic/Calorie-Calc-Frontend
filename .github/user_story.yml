@@ -1,0 +1,60 @@
+name: User Story
+description: Capture and implement a new user story for the Angular application
+title: "[Story]: "
+labels: ["feature", "frontend", "user-story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📘 User Story
+
+        Use this template to describe a new feature or functionality from a user’s perspective. This should help developers, designers, and testers understand the requirements and expectations clearly.
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: Describe the feature request as a user story.
+      placeholder: "As a user, I want to [do something] so that I can [achieve some value]."
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context or Behaviors
+      description: Add any specific behaviors, UI interactions, or conditional logic that should be considered.
+      placeholder: ex. The user should be able to update this field in multiple locations and see the change reflected immediately.
+
+  - type: checkboxes
+    id: acceptance-criteria
+    attributes:
+      label: General Acceptance Criteria
+      description: Ensure these standards are met before the story is considered complete.
+      options:
+        - label: Code follows the DRY (Don't Repeat Yourself) principle
+        - label: Applicable components are reusable across the project
+        - label: Each class and function includes proper JSDoc (`/** */`) documentation
+        - label: All edge cases are tested using Jasmine unit tests
+        - label: Cypress E2E tests cover all main user flows
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups or References
+      description: Include links to Figma, screenshots, or any reference documents.
+      placeholder: ex. Figma URL or screenshot showing expected layout
+
+  - type: textarea
+    id: tech-notes
+    attributes:
+      label: Technical Notes
+      description: Add any architectural decisions, design patterns, or service logic that needs to be considered.
+      placeholder: ex. Component should subscribe to state changes via RxJS BehaviorSubject...
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List any blocking stories, shared services, or backend API dependencies.
+      placeholder: ex. Requires API update to support PATCH endpoint for user metadata
