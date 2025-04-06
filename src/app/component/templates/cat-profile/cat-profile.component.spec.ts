@@ -70,4 +70,13 @@ describe('CatProfileComponent', () => {
     // Test if the correct error is thrown
     expect(() => component.catName).toThrowError('type is incorrect');
   });
+
+  it('should get all form values', () => {
+    component.catName.setValue('Whiskers');
+    component.currentWeight.setValue(1.5);
+    expect(component.allFormValues).to({
+      catName: 'Whiskers',
+      currentWeight: 1.5,
+    });
+  });
 });

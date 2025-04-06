@@ -35,10 +35,11 @@ export class CatProfileComponent {
     });
   }
 
+  //TO-DO add cat breed. Back it up with science.
+
   onSubmit(): void {
     if (this.regexForm.valid) {
       console.log('Name Submitted', this.regexForm.value);
-      console.log(this.allFormValues);
       console.log('cat name form control: ', this.catName);
     } else {
       console.log('Form is invalid');
